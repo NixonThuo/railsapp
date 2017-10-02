@@ -51,4 +51,8 @@ class BookController < ApplicationController
   	Book.find(params[:id]).destroy
    	redirect_to :action => 'list'
 	end
+
+	def show_subjects
+   @subject = Subject.find(params[:id])
+	end
 end
