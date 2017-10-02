@@ -4,10 +4,10 @@ class CreateSubjects < ActiveRecord::Migration[5.1]
       t.column :name, :string
       t.timestamps
     end
-      Subject.create :name => "Physics"
-      Subject.create :name => "Mathematics"
-      Subject.create :name => "Chemistry"
-      Subject.create :name => "Psychology"
-      Subject.create :name => "Geography"
+    Subject.create name: 'Physics'
+    Subject.create name: 'Mathematics'
+    Subject.create name: 'Chemistry'
+    Subject.create name: 'Psychology'
+    Subject.create name: 'Geography'
   end
 end
