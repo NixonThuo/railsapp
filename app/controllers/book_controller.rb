@@ -1,4 +1,5 @@
 class BookController < ApplicationController
+  layout 'standard'
   def list
     @books = Book.all
   end
@@ -47,12 +48,12 @@ class BookController < ApplicationController
     params.require(:book).permit(:title, :price, :subject_id, :description)
   end
 
-	def delete
-  	Book.find(params[:id]).destroy
-   	redirect_to :action => 'list'
-	end
+  def delete
+    Book.find(params[:id]).destroy
+    redirect_to action: 'list'
+  end
 
-	def show_subjects
-   @subject = Subject.find(params[:id])
-	end
+  def show_subjects
+    @subject = Subject.find(params[:id])
+  end
 end
